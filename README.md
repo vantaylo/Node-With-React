@@ -22,7 +22,3 @@ A large feedback-collection web application that profiles the advanced features 
 | Surveyees click on link in email to provide feedback | Email Provider<br>Express<br>MongoDB    |
 | App tabulates feedback                               | MongoDB                                 |
 | User can see report of all survey responses          | React<br>Redux<br>MongoDB               |
-
-<h3>Server Side Architecture</h3>
-
-![Server Side Architecture](server_side_architecture_snapshot.png)
