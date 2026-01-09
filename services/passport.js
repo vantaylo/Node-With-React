@@ -15,7 +15,8 @@ passport.deserializeUser((id, done) => {
   });
 });
 
-passport.use(
+if (keys.clientID && keys.clientSecret) {
+  passport.use(
   new GoogleStrategy(
     {
       clientID: keys.googleClientID,
@@ -35,3 +36,6 @@ passport.use(
     }
   )
 );
+} else {
+  console.warn('Google OAuth not configured: missing GOOGLE client ID/secret');
+}

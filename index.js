@@ -7,7 +7,11 @@ const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+if (keys.mongoURI) {
+    mongoose.connect(keys.mongoURI);
+} else {
+    console.warn('MongoDB not configured. Skipping database connection.');
+}
 
 const app = express();
 
